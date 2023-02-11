@@ -41,3 +41,14 @@
   font-size: 25px;
   color: #000000;
 }
+
+@media (screen and min-width < 767px) {
+  .bg-container {
+    padding: 20px;
+  }
+
+  .heading {
+    font-size: 25px;
+  }
+}
+
