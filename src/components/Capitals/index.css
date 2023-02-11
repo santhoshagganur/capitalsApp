@@ -1,0 +1,43 @@
+/* Write your CSS here */
+.bg-container {
+  background-color: #93c5fd;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 15px;
+  padding-left: 25px;
+  padding: 25px;
+}
+
+.heading {
+  font-family: Roboto;
+  font-size: 40px;
+  color: #000000;
+}
+
+.selection-container {
+  width: 200px;
+  height: 40px;
+  margin-right: 5px;
+}
+
+.text {
+  font-family: Roboto;
+  font-size: 18px;
+  color: #1e293b;
+}
+
+.country {
+  font-family: Roboto;
+  font-size: 25px;
+  color: #000000;
+}
