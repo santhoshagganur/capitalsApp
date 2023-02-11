@@ -32,26 +32,18 @@ const countryAndCapitalsList = [
 // Write your code here
 
 class Capitals extends Component {
-  state = {activeCapital: countryAndCapitalsList[0].capitalDisplayText}
+  state = {activeCapital: countryAndCapitalsList[0].capitalDisplayText, country: countryAndCapitalsList[0].country}
 
   changeCapital = event => {
-    this.setState({activeCapital: event.target.value})
-  }
-
-  getCountry = () => {
-    const {activeCapital} = this.state
-
-    const activeCountryAndCapital = countryAndCapitalsList.find(
-      eachCapital => eachCapital.id === activeCapital,
+    const country = countryAndCapitalsList.filter(
+      each => each.id === event.target.value,
     )
-
-    return activeCountryAndCapital.country
+    this.setState({activeCapital: event.target.value, country: country[0].country})
   }
 
+  
   render() {
-    const {activeCapital} = this.state
-    const country = this.getCountry(activeCapital)
-    console.log(country)
+    const {activeCapital, country} = this.state
     return (
       <div className="bg-container">
         <div className="card-container">
@@ -64,7 +56,7 @@ class Capitals extends Component {
               value={activeCapital}
             >
               {countryAndCapitalsList.map(each => (
-                <option value={each.id}> {each.capitalDisplayText} </option>
+                <option value={each.id} key= {each.id}> {each.capitalDisplayText} </option>
               ))}
             </select>
             <label htmlFor="capitals" className="text">
